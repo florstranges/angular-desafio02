@@ -1,0 +1,10 @@
+<h1 [ngStyle]="{'textAlign':'center'}">Lista de alumnos</h1>
+<ul>
+    <li *ngFor="let alumno of alumnos" 
+    [ngClass]="alumno.nota >= 6 ? 'aprobado' : 'desaprobado'">
+        {{alumno.nombre | uppercase}} - {{alumno.curso}} - {{alumno.nota}}
+    </li>
+</ul>
+
+
+
